@@ -1,15 +1,13 @@
-0;export
-import { createEventDispatcher } from "svelte";
-const dispatch = createEventDispatcher();
-export
-<bubutton></bubutton> clclass=""btn btn-sm btn-dangerDel
-<button class="btn btn-sm btn-danger">Del</button>
-on:clclick={}onDelete
-
-const ononDelete = () => {}Xdisdispatch()""removePlayer, bname btn-smp
-  const toogleControl = () => (showControl = !showControl)
-
-  const onDelete = () => dispatch("removeplayer", name)
+<script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+  export let name;
+  export let points;
+  let showControls = false;
+  const addPoint = () => (points += 1);
+  const removePoint = () => (points -= 1);
+  const toggleControls = () => (showControls = !showControls);
+  const onDelete = () => dispatch("removeplayer", name);
 </script>
 
 <style>
